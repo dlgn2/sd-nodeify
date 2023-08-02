@@ -1,5 +1,3 @@
-//Shim.js is needed for nodeify our react native project. It allow us to use crypto,ethers,buffer e.t.c.
-
 import "react-native-get-random-values";
 import "@ethersproject/shims";
 
@@ -33,6 +31,5 @@ process.env["NODE_ENV"] = isDev ? "development" : "production";
 if (typeof localStorage !== "undefined") {
   localStorage.debug = isDev ? "*" : "";
 }
-// If using the crypto shim, uncomment the following line to ensure
-// crypto is loaded first, so it can populate global.crypto
+
 require("crypto");
